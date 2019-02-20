@@ -24,3 +24,27 @@ vscode 未安装eslint插件前，此时页面上无任何提示
     "eslint.autoFixOnSave": true,
 }
 页面上保存时代码会自动修复错误
+
+
+husky + lint-stage
+
+使用原因：在vscode上编辑时保存自动修复错误。但有些错误是不可修复的，也可能
+有人在vscode以外的地方手动编辑文件，仍然会有错误代码。
+为了保证提交代码的正确性，使用husky. 一般配合 lint-staged 工具一起使用
+
+8. npm i -D husky lint-staged
+
+在package.json文件中添加下面配置
+
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "npm run lint:fix",
+      "git add"
+    ]
+  },
+  在vscode外修改代码，执行 git add . 和 git commit 可以看到提交前自动修复
