@@ -33,7 +33,7 @@ husky + lint-stage
 为了保证提交代码的正确性，使用husky. 一般配合 lint-staged 工具一起使用
 
 8. npm i -D husky lint-staged
-
+```
 在package.json文件中添加下面配置
 
   "husky": {
@@ -47,4 +47,5 @@ husky + lint-stage
       "git add"
     ]
   },
+```
   在vscode外修改代码，执行 git add . 和 git commit 可以看到提交前自动修复
