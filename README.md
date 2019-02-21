@@ -49,3 +49,17 @@ husky + lint-stage
   },
 ```
   在vscode外修改代码，执行 git add . 和 git commit 可以看到提交前自动修复
+
+  ## eslint rule
+  npm i react
+
+  通过 react 代码来说明 rules 的配置
+  JSX not allowed in files with extension '.js'
+// https://eslint.org/
+ //https://github.com/airbnb/javascript
+//https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-filename-extension.md
+
+ 不要着急去配置rules，可以先写一些代码，看下那些规则是你真正需要，哪些你并不关心
+ rule "error" "warning" "off"
+
+ 0:"off"   1:"warning"  2:"error"

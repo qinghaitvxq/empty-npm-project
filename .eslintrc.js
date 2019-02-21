@@ -19,5 +19,10 @@ module.exports = {
     'react',
   ],
   rules: {
+    "no-unused-vars": ["error", {
+      "vars": "local",
+      "args": "none"
+    }],
+    "react/jsx-filename-extension": 0,
   },
 };
