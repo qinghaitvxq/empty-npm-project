@@ -1,5 +1,4 @@
-
-import React, { Component } from 'react';
+import React, { Component } from "react";
 // console
 //     .log(
 //     'hello' +
@@ -17,32 +16,24 @@ import React, { Component } from 'react';
 //   }
 // }
 
-console
-  .log(
-    'hello'
-    + 'my'
-    + 'friend',
-  );
+// console.log("test" + "my" + "friend");
 
 // const bar = 10;
 
 const work = Promise((resolve, reject) => {
-  resolve('Some data');
+  resolve("Some data");
 });
-work.then((data) => {
+work.then(data => {
   console.log(data);
 });
 
-
 class App extends Component {
   componentDidMount() {
-    console.log('test');
+    console.log("test");
   }
 
   render() {
-    return (
-      <div>hello</div>
-    );
+    return <div>hello</div>;
   }
 }
 export default App;
