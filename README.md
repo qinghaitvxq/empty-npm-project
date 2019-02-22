@@ -15,10 +15,12 @@
    执行 npx eslint src/_.js --fix 错误已修复
 
 8. 将上面的命令放到 scripts 里  
+ ```
    "scripts": {
    "lint": "eslint '**/\*.js'",
    "lint:fix":"eslint '**/\*.js' --fix"
    },
+  ```
    上面的命令可以写成
    npm run lint
    npm run lint:fix
